@@ -14,7 +14,7 @@ export function AddCustomerModal() {
     triggerRefresh,
   } = useVyapar();
 
-  const [form, setForm] = useState({
+  const emptyCustomerForm = {
     name: '',
     phone: '',
     email: '',
@@ -23,7 +23,15 @@ export function AddCustomerModal() {
     notes: '',
     openingBalance: 0,
     creditLimit: 5000,
-  });
+  };
+
+  const [form, setForm] = useState(emptyCustomerForm);
+
+  React.useEffect(() => {
+    if (isAddCustomerModalOpen) {
+      setForm(emptyCustomerForm);
+    }
+  }, [isAddCustomerModalOpen]);
 
   if (!isAddCustomerModalOpen) return null;
 

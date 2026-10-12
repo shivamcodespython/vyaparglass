@@ -49,6 +49,12 @@ export function RecordPurchaseModal() {
       }
     }
     if (isRecordPurchaseModalOpen) {
+      setPurchaseItems([]);
+      setAmountPaid(0);
+      setCustomSupplierName('');
+      setSupplierPhone('');
+      setSupplierInvoiceNo('');
+      setNotes('');
       load();
     }
   }, [isRecordPurchaseModalOpen]);
