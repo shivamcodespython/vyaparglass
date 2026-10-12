@@ -1,0 +1,36 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# Testing
+/coverage
+
+# Next.js build output
+/.next/
+/out/
+
+# Production build artifacts
+/build
+dist
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Local environment files (contains secret keys)
+.env*.local
+.env
+
+# TypeScript cache
+*.tsbuildinfo
+next-env.d.ts
+
+# Editor & OS files
+.DS_Store
+*.pem
+.vscode/
+_backup_old/
