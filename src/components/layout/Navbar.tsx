@@ -85,7 +85,7 @@ export function Navbar() {
       <div className="flex items-center gap-2">
         {/* Quick New Bill Button */}
         <button
-          onClick={() => setIsNewBillModalOpen(true)}
+          onClick={() => setActiveTab('pos')}
           className="px-3.5 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs shadow-md shadow-indigo-600/20 flex items-center gap-1.5 transition-all transform active:scale-95"
         >
           <Receipt className="w-3.5 h-3.5" />

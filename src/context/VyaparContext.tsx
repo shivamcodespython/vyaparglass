@@ -109,6 +109,12 @@ export function VyaparProvider({ children }: { children: React.ReactNode }) {
 
   // Quick modals
   const [isNewBillModalOpen, setIsNewBillModalOpen] = useState(false);
+  const handleSetIsNewBillModalOpen = useCallback((open: boolean) => {
+    setIsNewBillModalOpen(open);
+    if (open) {
+      setActiveTab('pos');
+    }
+  }, []);
   const [isAddProductModalOpen, setIsAddProductModalOpen] = useState(false);
   const [isRecordPurchaseModalOpen, setIsRecordPurchaseModalOpen] = useState(false);
   const [isAddCustomerModalOpen, setIsAddCustomerModalOpen] = useState(false);
@@ -349,7 +355,7 @@ export function VyaparProvider({ children }: { children: React.ReactNode }) {
         setTheme,
         isOnline,
         isNewBillModalOpen,
-        setIsNewBillModalOpen,
+        setIsNewBillModalOpen: handleSetIsNewBillModalOpen,
         isAddProductModalOpen,
         setIsAddProductModalOpen,
         isRecordPurchaseModalOpen,

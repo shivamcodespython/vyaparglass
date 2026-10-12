@@ -210,7 +210,7 @@ export function OverviewTab() {
       {/* Quick Action Dock */}
       <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
         <button
-          onClick={() => setIsNewBillModalOpen(true)}
+          onClick={() => setActiveTab('pos')}
           className="p-3.5 rounded-2xl bg-gradient-to-tr from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white shadow-md shadow-indigo-600/20 flex flex-col items-center justify-center gap-1.5 transition-all active:scale-95 group"
         >
           <Receipt className="w-5 h-5 group-hover:scale-110 transition-transform" />
